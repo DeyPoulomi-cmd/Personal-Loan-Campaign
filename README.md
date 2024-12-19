@@ -129,9 +129,12 @@ Institution: Great Learning, mentored by UT Austin
 Purpose: Final Machine Learning Project
 
 
+Binder
+https://notebooks.gesis.org/binder/jupyter/user/deypoulomi-cmd--l-loan-campaign-c3owxias/doc/tree/Personal_Loan_Campaign.ipynb
 
 
-## 🔗 Links
+
+## 🔗 Links[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/DeyPoulomi-cmd/Personal-Loan-Campaign/main?labpath=Personal_Loan_Campaign.ipynb)
 [![portfolio](https://img.shields.io/badge/github-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/DeyPoulomi-cmd/DeyPoulomi-cmd)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/poulomi-d-209aa2218/)
 
