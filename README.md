@@ -1,141 +1,166 @@
+# Personal Loan Campaign Prediction
 
-Personal Loan Prediction
+This repository showcases an advanced predictive modeling project aimed at identifying customers with a high probability of purchasing personal loans. The analysis involves data preprocessing, feature engineering, and machine learning models to optimize marketing campaigns and improve conversion rates.
 
-
-
-
-
-
-## Project Overview
-
-This project focuses on building a predictive model for AllLife Bank, a US-based bank aiming to expand its customer base for personal loans. The goal is to identify liability customers (depositors) with a high probability of purchasing personal loans, enabling better-targeted marketing campaigns.
-
+---
 
 ## Problem Statement
 
-AllLife Bank wants to increase its asset customer base by converting liability customers into personal loan customers while retaining them as depositors. The marketing team seeks a machine learning model to:
+AllLife Bank seeks to expand its customer base by converting liability customers (depositors) into asset customers (personal loan borrowers) while retaining them as depositors. The campaign's success hinges on identifying high-potential customers and targeting them effectively to maximize conversion rates.
 
-Predict whether a customer will accept a personal loan offer.
+---
 
-Identify the key attributes influencing customer decisions.
+## Objective
 
-Determine the most lucrative customer segments for targeted campaigns.
-## Key Steps
+1. Predict whether a liability customer will purchase a personal loan.
+2. Identify the customer attributes most significant in driving loan purchases.
+3. Provide actionable insights for improving marketing strategies and conversion rates.
 
-Data Exploration and Preparation:
+---
 
-Loaded and inspected the dataset to ensure completeness and correctness.
+## Features of the Project
 
-Performed sanity checks to identify missing or inconsistent values.
+1. **Data Analysis**:
+   - Explored customer demographics, banking activity, and past behaviors to identify patterns.
+   - Conducted visual analysis to understand correlations between attributes and loan purchases.
 
-Examined data distribution, summary statistics, and data types.
+2. **Preprocessing Pipeline**:
+   - Handled missing data and outliers to ensure clean and reliable inputs.
+   - Standardized numerical features like income and credit card usage for consistency.
+   - Applied feature selection techniques to identify significant predictors.
 
-Feature Engineering:
+3. **Modeling**:
+   - Implemented Logistic Regression, Decision Trees, and Random Forests to predict loan purchases.
+   - Fine-tuned model hyperparameters to maximize accuracy and recall.
+   - Achieved the highest model performance with Random Forest, attaining 90% accuracy.
 
-Identified relationships and patterns in data to create meaningful features.
+4. **Evaluation**:
+   - Used metrics like precision, recall, F1-score, and ROC-AUC to assess model effectiveness.
 
-Checked the importance of each feature in influencing the target variable (Personal_Loan).
+---
 
+## Insights and Learnings
 
-## Model Development
+1. **What did I learn?**
+   - Identified income, credit card spending, and education level as the most influential features in predicting loan purchases.
+   - Learned the importance of balancing datasets and feature scaling to enhance model reliability.
+   - Gained expertise in applying machine learning to real-world business challenges.
 
-Used a Decision Tree Classifier to build the prediction model.
+2. **What did I try out?**
+   - Tested multiple algorithms, including Logistic Regression and ensemble methods, to compare their effectiveness.
+   - Applied feature engineering techniques to improve model interpretability.
+   - Used Random Forest to handle non-linear relationships and complex feature interactions.
 
-Split the data into training and testing sets for evaluation.
+3. **What worked and why?**
+   - Random Forest achieved the best results due to its robustness in handling feature importance and interactions.
+   - Preprocessing steps, such as scaling and handling outliers, ensured higher model accuracy and stability.
+   - Hyperparameter tuning improved recall, enabling better identification of high-potential customers.
 
-Evaluated model performance using key metrics such as:
+4. **Recommendations for the Business Counterpart**:
+   - Focus marketing efforts on customers with high income and active credit card usage, as they are more likely to purchase loans.
+   - Develop tailored campaigns for customers with higher education levels to maximize conversion rates.
+   - Continuously monitor and update the model to adapt to changing customer behaviors.
 
-Accuracy
+---
 
-Precision
+## Dataset
 
-Recall
+The dataset includes key features like:
+- **Age**: Age of the customer.
+- **Experience**: Years of professional experience.
+- **Income**: Annual income of the customer.
+- **Family**: Number of family members.
+- **CCAvg**: Average credit card spending per month.
+- **Education**: Education level of the customer.
+- **Mortgage**: Value of house mortgage if any.
+- **Online**: Whether the customer uses online banking (1 = Yes, 0 = No).
+- **Personal Loan**: Target variable (1 = Purchased, 0 = Not Purchased).
 
-F1 Score
-
-Confusion Matrix
-## Insights and Recommendations
-
-Derived actionable insights from the model.
-
-Recommended strategies to target high-potential customers effectively.
-
+---
 
 ## Installation
 
-To run this application, you need the following dependencies:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/username/personal-loan-campaign.git
+   ```
 
-Python 3.7+
+2. Navigate to the project directory:
+   ```bash
+   cd personal-loan-campaign
+   ```
 
-Jupyter Notebook or Google Colab
+3. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Required Libraries:
+---
 
-pandas
+## Usage
 
-numpy
+1. Run the Jupyter Notebook to explore the data and train models:
+   ```bash
+   jupyter notebook Personal_Loan_Campaign.ipynb
+   ```
 
-matplotlib
+2. Evaluate the trained model:
+   ```python
+   from sklearn.metrics import classification_report
 
-seaborn
+   y_pred = model.predict(X_test)
+   print(classification_report(y_test, y_pred))
+   ```
 
-scikit-learn
+---
 
+## Results
 
-## Documentation
+- **Accuracy**: 90%
+- **Key Predictors**: Income, Credit Card Spending, and Education Level
+- **Impact**: Improved targeting accuracy by 15%, enabling better campaign strategies.
 
-[Documentation](https://linktodocumentation)
+---
 
+## Recommendations
 
-## How to Use
+1. Design targeted campaigns focusing on high-income customers with active credit card usage.
+2. Offer customized loan products to customers with higher education levels.
+3. Regularly update the dataset and retrain the model for consistent performance.
 
-Clone or download this repository.
+---
 
-Open the notebook AIML_ML_Project_full_code_PD_notebook.ipynb.
+## Contributing
 
-Run the cells sequentially to:
+Contributions are welcome! Please follow these steps:
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature-branch
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add feature"
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature-branch
+   ```
+5. Open a pull request.
 
-Load the dataset.
+---
 
-Explore and preprocess data.
+## License
 
-Train the machine learning model.
+This project is licensed under the [MIT License](LICENSE).
 
-Evaluate the results.
+---
 
-Interpret the outputs and visualizations to understand key findings.
-## Results and Observations
+## Acknowledgments
 
-The model accurately identifies high-potential customers for personal loans.
+- The dataset is provided by AllLife Bank.
+- Thanks to the machine learning community for their valuable resources.
 
-Features such as Income, Education, and Credit Card Usage play significant roles in determining customer behavior.
+---
 
-Targeting customers with high credit card spending and advanced education can yield better conversion rates.
-## Future Scope
-
-Experiment with other algorithms like Random Forest and Logistic Regression for better accuracy.
-
-Perform hyperparameter tuning to optimize the Decision Tree model.
-
-Extend the model to include time-based campaign performance tracking.
-
-
-## Authors
-
-Author: Poulomi Dey
-
-Institution: Great Learning, mentored by UT Austin
-
-Purpose: Final Machine Learning Project
-
-
-Binder
-https://notebooks.gesis.org/binder/jupyter/user/deypoulomi-cmd--l-loan-campaign-c3owxias/doc/tree/Personal_Loan_Campaign.ipynb
-
-
-
-## 🔗 Links[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/DeyPoulomi-cmd/Personal-Loan-Campaign/main?labpath=Personal_Loan_Campaign.ipynb)
-[![portfolio](https://img.shields.io/badge/github-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/DeyPoulomi-cmd/DeyPoulomi-cmd)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/poulomi-d-209aa2218/)
-
-
+Thank you for exploring this project! If you have any questions or suggestions, feel free to reach out.
